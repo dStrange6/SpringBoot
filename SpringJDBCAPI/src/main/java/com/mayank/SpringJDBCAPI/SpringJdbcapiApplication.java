@@ -16,6 +16,8 @@ public class SpringJdbcapiApplication {
 
 		repo.getAllEmployee().forEach(System.out::println);
 
+		System.out.println(container.getClass());
+
 		System.out.println(container.getBeanDefinitionCount());
 	}
 
