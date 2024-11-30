@@ -1,8 +1,6 @@
 package com.mayank.SpringDataJPA01.DAO;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import org.springframework.stereotype.Component;
 
 @Entity
@@ -10,21 +8,23 @@ import org.springframework.stereotype.Component;
 public class Employee
 {
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
     private String name;
     private String city;
+    private double salary;
 
     public Employee() {
     }
 
-    public Employee(Integer id, String name, String city, double salary) {
-        this.id = id;
+    public Employee( String name, String city, double salary) {
+
         this.name = name;
         this.city = city;
         this.salary = salary;
     }
 
-    private double salary;
+
 
     public void setId(Integer id) {
         this.id = id;
