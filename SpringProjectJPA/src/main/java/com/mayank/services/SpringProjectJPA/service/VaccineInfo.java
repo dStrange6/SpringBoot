@@ -1,7 +1,7 @@
-package com.mayank.SpringDataJPA02.service;
+package com.mayank.services.SpringProjectJPA.service;
 
-import com.mayank.SpringDataJPA02.Vaccine;
-import com.mayank.SpringDataJPA02.dao.VaccineRepo;
+import com.mayank.services.SpringProjectJPA.Vaccine;
+import com.mayank.services.SpringProjectJPA.dao.VaccineRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

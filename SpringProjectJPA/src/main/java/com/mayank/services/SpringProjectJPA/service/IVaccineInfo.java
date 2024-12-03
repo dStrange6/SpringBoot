@@ -1,6 +1,6 @@
-package com.mayank.SpringDataJPA02.service;
+package com.mayank.services.SpringProjectJPA.service;
 
-import com.mayank.SpringDataJPA02.Vaccine;
+import com.mayank.services.SpringProjectJPA.Vaccine;
 
 import java.util.Optional;
 
