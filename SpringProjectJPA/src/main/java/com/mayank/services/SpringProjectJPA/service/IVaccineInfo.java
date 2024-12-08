@@ -11,4 +11,6 @@ public interface IVaccineInfo
     Optional<Vaccine> getVaccineById(Integer id);
 
     Iterable<Vaccine> registerMultipleVaccines(Iterable<Vaccine> vaccines);
+
+    //more methods to be added - deleteByID, getAll, deleteMultipleByID, getMultipleByID
 }

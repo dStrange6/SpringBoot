@@ -38,6 +38,8 @@ public class SpringDataJpa02Application
 
 		vaccineList.add(v1);
 		vaccineList.add(v2);
+		vaccineList.add(new Vaccine("Forxa", 41312.2));
+		vaccineList.add(new Vaccine("Sputnik", 342.22));
 
 		//vaccineInfo.registerMultipleVaccines(vaccineList).forEach(v->System.out.println(v));   //can also be written in below format
 		vaccineInfo.registerMultipleVaccines(vaccineList).forEach(System.out::println);
