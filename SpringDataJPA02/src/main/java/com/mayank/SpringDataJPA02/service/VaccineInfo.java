@@ -26,6 +26,5 @@ public class VaccineInfo implements IVaccineInfo {
     @Override
     public Iterable<Vaccine> registerMultipleVaccines(Iterable<Vaccine> vaccines) {
         return vaccineRepo.saveAll(vaccines);
-
     }
 }

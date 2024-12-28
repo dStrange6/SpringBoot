@@ -30,7 +30,7 @@ public class SpringDataJpa02Application
 //		Optional<Vaccine> v3 = vaccineInfo.getVaccineById(2);
 //		System.out.println(v3.get());
 
-		Vaccine v1 = new Vaccine("CoviShiled", 231321.23);
+		Vaccine v1 = new Vaccine("CoviShield", 231321.23);
 		Vaccine v2 = new Vaccine("Covaxin", 342.21);
 
 		//List<Vaccine> vaccineList = new ArrayList<Vaccine>();  //after java 7 no need to specify generic type on both side
