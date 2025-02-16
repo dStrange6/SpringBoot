@@ -10,4 +10,7 @@ public interface IPatientService
     Patient addPatient(PatientModel patientModel);
     List<Patient> getAllPatients();
     Integer getNewId();
+    void deletePatient(Integer id);
+    Patient getPatientById(Integer id);
+    Patient updatePatient(Patient patient);
 }

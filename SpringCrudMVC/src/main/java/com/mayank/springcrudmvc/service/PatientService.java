@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class PatientService implements IPatientService
@@ -37,5 +38,22 @@ public class PatientService implements IPatientService
     @Override
     public Integer getNewId() {
         return dao.findAll().get((int) (dao.count()-1)).getId()+1;
+    }
+
+    @Override
+    public void deletePatient(Integer id) {
+        dao.deleteById(id);
+    }
+
+    @Override
+    public Patient getPatientById(Integer id) {
+        Optional<Patient> patient = dao.findById(id);
+        return patient.orElse(null);
+    }
+
+    @Override
+    public Patient updatePatient(Patient patient) {
+        System.out.println(patient);
+        return dao.save(patient);
     }
 }

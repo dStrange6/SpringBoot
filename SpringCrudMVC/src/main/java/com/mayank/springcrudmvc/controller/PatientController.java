@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -46,5 +47,24 @@ public class PatientController
         Patient patient=patientService.addPatient(patientModel);
         System.out.println("Patient Registered Successfully : " + patient);
         return new ModelAndView("redirect:/home");   //redirecting to home controller
+    }
+    @GetMapping("/delete/{id}")
+    public String deletePatient(@PathVariable Integer id)
+    {
+        patientService.deletePatient(id);
+        return "redirect:/home";
+    }
+    @GetMapping("/update/{id}")
+    public String updatePatient(@PathVariable Integer id, Map<String, Object> model)
+    {
+        Patient patient = patientService.getPatientById(id);
+        model.put("patient", patient);
+        return "update";
+    }
+    @PostMapping("/update")
+    public String updatePatient(@ModelAttribute Patient patient)
+    {
+        patientService.updatePatient(patient);
+        return "redirect:/home";
     }
 }

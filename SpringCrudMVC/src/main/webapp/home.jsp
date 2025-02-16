@@ -5,12 +5,14 @@
     <title>Patient Home Page</title>
 </head>
 <body>
-<table>
+<table align="center" cellspacing="20">
     <tr>
-        <td>ID</td>
-        <td>Name</td>
-        <td>Age</td>
-        <td>Gender</td>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Gender</th>
+        <th>Update User</th>
+        <th>Delete User</th>
     </tr>
         <c:forEach items="${patients}" var="patient">
     <tr>
@@ -18,7 +20,8 @@
             <td>${patient.name}</td>
             <td>${patient.age}</td>
             <td>${patient.gender}</td>
-
+            <td><a href="update/${patient.id}">update</a></td>
+            <td><a href="delete/${patient.id}">delete</a></td>
     </tr>
         </c:forEach>
 
